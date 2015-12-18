@@ -1,0 +1,66 @@
+<!doctype html>
+<html<% if (includeModernizr) { %> class="no-js"<% } %> lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= appname %></title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+    <!-- build:css styles/styles.css -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- endbuild -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <% if (includeModernizr) { %>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild --><% } %>
+
+  </head>
+  <body>
+   <!--[if lt IE 10]>
+            <p class="browserupgrade">Sie verwenden einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/">upgraden Sie Ihren Browser</a> um die Seite richtig darzustellen.</p>
+        <![endif]-->
+    <header class="main-header">
+        <a class="mobile_menu" href='#'>
+            <span class="menu_bars">
+                <span class="bar_top"></span>
+                <span class="bar_middle"></span>
+                <span class="bar_bottom"></span>
+            </span>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="scroll_to">menu item</a></li>
+                <li><a href="#" class="scroll_to">menu item</a></li>
+                <li><a href="#" class="scroll_to">menu item</a></li>
+                <li><a href="#" class="scroll_to">menu item</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <div class="wrapper">
+    	    <section>
+                <h1>Yeoman - Onepage Generator</h1>   
+                <p>
+                    This site is built with the following tools
+                </p>
+               <ul>
+                   <li><a href="http://www.sass-lang.com">Sass</a></li>
+                   <li><a href="http://corysimmons.github.io/lost/">LostGrid</a></li>
+                   <li><a href="http://www.gulp.com" target="blank">Gulp</a></li>
+                   <li><a href="http://www.jquery.com" target="blank">jQuery</a></li>
+               </ul>
+            </section>
+        </div>
+    </main>
+    
+
+       
+    <a href="#top" class="scroll_to_top">Top</a>
+    <!-- build:js -->
+    <script src="scripts/scripts.js"></script>
+    <!-- endbuild --> 
+  </body>
+</html>

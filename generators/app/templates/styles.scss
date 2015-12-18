@@ -1,0 +1,14 @@
+// variables
+@import 'variables/colors';
+@import 'variables/breakpoints';
+
+//css normalize
+@import 'modules/normalize';
+
+// modules
+@import 'modules/sprites';
+@import 'modules/base';
+@import 'modules/header';
+@import 'modules/main';
+@import 'modules/buttons';
+@import 'modules/nav';

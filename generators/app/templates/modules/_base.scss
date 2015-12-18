@@ -1,0 +1,71 @@
+/*
+ * ------------------------------------------------------------------------------------------------------------------------
+ * Base Styling
+ * ------------------------------------------------------------------------------------------------------------------------	
+ */
+
+ body {
+ 	font-family: 'Open Sans', Arial, sans-serif;
+	font-size:1em;
+	line-height:1.5;
+}
+
+.browserupgrade { padding:.8em 0; font-size:1.2em; color:$white; text-align:center; background:$orange;
+	a { color:$white; font-weight:bold; }
+ }
+
+.wrapper { width:80%; margin:0 auto; max-width:$xlarge; }
+
+.fullwidth { width:100%; display:block; }
+
+.main-content { text-align:center; 
+	ul { list-style:none; 
+		a { text-decoration:none; }
+	}
+}
+
+.scroll_to_top {
+	padding:1.2em .4em;
+	text-decoration:none;
+	color:$black;
+	border-radius:10px;
+	border:1px solid $primary;
+	background-color:$grey;
+	display:block;
+	width: 65px;
+	height: 65px;
+	position:fixed;
+	bottom:5em; right:3em;
+	text-align:center;
+	vertical-align:center;
+	visibility:hidden;
+	opacity:0;
+	text-indent:-999em;
+	-webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+	&.is-visible { visibility: visible; opacity:1; }
+	&.fade-out { opacity: .5; }
+
+	&:hover { opacity:1; }
+}
+
+.half-left { float:left; width:50%; }
+.half-right { float:right; width:50%; }
+
+@media screen and (max-width: $large) {
+	.wrapper { width:95%; }
+}
+
+@media screen and (max-width:$small) {
+	h1 { font-size:1.5em; margin-bottom:.2em; }
+	h2 { font-size:1.5em; }
+	h3 { font-size:1.2em; }
+
+	.scroll_to_top { display:none; }
+	.wrapper { width:100%; padding:.5em; }
+	.half-left, .half-right { width:100%; float:none; }
+}
+
+
+
