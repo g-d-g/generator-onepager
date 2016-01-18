@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	var $mobileMenu = $('.mobile_menu'),
-		$nav = $('.main-nav'),
-		$header_height = $('.main-header').outerHeight();
+	var $mobileMenu = $('.mobilemenu'),
+		$nav = $('.navigation__container'),
+		$header_height = $('.header').outerHeight();
 		$navLinks = $('.scroll_to'),
 		$sections = $('.section');
 

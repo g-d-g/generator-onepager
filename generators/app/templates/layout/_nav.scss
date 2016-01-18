@@ -3,30 +3,28 @@
  * Nav
  * ------------------------------------------------------------------------------------------------------------------------	
  */
- .main-nav  { 
- 	ul {
+ .navigation  { 
+ 	&__container {
  		list-style:none; 
 		lost-utility:clearfix;
 	}
-	li { 
+	&__item { 
 		lost-column:1/4;
 		height:100%;
-		
- 		.scroll_to {  padding:.9em 0 .9em 0; text-decoration:none; color: $black; font-weight:500; text-align:center; display:block; background-color:$grey; 
- 			&.active,&:hover { color:$white; background-color:darken($grey, 10%);}
- 		}
-		
 	}
+}
 
- }
+	.scroll_to {  padding:.9em 0 .9em 0; text-decoration:none; color: $black; font-weight:500; text-align:center; display:block; background-color:$grey; 
+		&.active,&:hover { color:$white; background-color:darken($grey, 10%);}
+	}
+ 
 
  @media screen and (max-width:$medium) {
- 	.main-nav {
- 		display:none;
- 		&.active { display:block; }
- 		li { lost-column:1/1; 
+ 	.navigation { display:none;
+ 		&__item { lost-column:1/1; 
 			&:nth-child(1n+1) { border-bottom:1px solid darken($grey,10%); }
 			&:last-child { border:none; }
  		}
+ 		&.active { display:block; }	
  	}
  }
