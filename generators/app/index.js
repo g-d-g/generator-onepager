@@ -144,20 +144,38 @@ var OnepageGenerator = yeoman.generators.Base.extend({
       var css = 'styles.css';
 
       if (this.includeSass) {
-        var modules = 'modules';
-        var variables = 'variables';
-        var scss = 'styles.scss';
+        var sassParts = {
+            "components":"components",
+            "layout":"layout",
+            "pages":"pages",
+            "base":"base",
+            "utils":"utils",
+            "variables":"variables",
+            "scss":"main.scss"
+        };
         this.fs.copyTpl(
-          this.templatePath(modules),
-          this.destinationPath('app/assets/sass/' + modules)
+          this.templatePath(sassParts['base']),
+          this.destinationPath('app/assets/sass/' + sassParts['base'])
           );
         this.fs.copyTpl(
-          this.templatePath(variables),
-          this.destinationPath('app/assets/sass/' + variables)
+          this.templatePath(sassParts['components']),
+          this.destinationPath('app/assets/sass/' + sassParts['components'])
           );
         this.fs.copyTpl(
-          this.templatePath(scss),
-          this.destinationPath('app/assets/sass/' + scss)
+          this.templatePath(sassParts['layout']),
+          this.destinationPath('app/assets/sass/' + sassParts['layout'])
+          );
+        this.fs.copyTpl(
+          this.templatePath(sassParts['pages']),
+          this.destinationPath('app/assets/sass/' + sassParts['pages'])
+          );
+        this.fs.copyTpl(
+          this.templatePath(sassParts['utils']),
+          this.destinationPath('app/assets/sass/' + sassParts['utils'])
+          );
+        this.fs.copyTpl(
+          this.templatePath(sassParts['scss']),
+          this.destinationPath('app/assets/sass/' + sassParts['scss'])
         );
         this.fs.copyTpl(
           this.templatePath(css),
