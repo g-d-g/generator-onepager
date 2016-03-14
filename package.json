@@ -1,6 +1,6 @@
 {
   "name": "generator-onepager",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Yeoman Generator to get a headstart when building typical onepage websites",
   "homepage": "",
   "author": "Daniel Holpfer",
