@@ -150,8 +150,7 @@ var OnepageGenerator = yeoman.generators.Base.extend({
             "pages":"pages",
             "base":"base",
             "utils":"utils",
-            "variables":"variables",
-            "scss":"main.scss"
+            "scss":"styles.scss"
         };
         this.fs.copyTpl(
           this.templatePath(sassParts['base']),
