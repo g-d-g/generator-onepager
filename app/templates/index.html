@@ -22,7 +22,11 @@
     <% if (includeModernizr) { %>
         <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild --><% } %>
-
+    <% if (includeBootstrap) { %>
+    <style>
+      .jumbotron { margin-top:2em; }
+    </style>
+    <% } %>
   </head>
   <body>
    <!--[if lt IE 10]>
