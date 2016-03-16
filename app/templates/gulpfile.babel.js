@@ -4,12 +4,14 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+<% if (!includeBootstrap) { %>
 import lost from 'lost';
-
+<% } %>
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-gulp.task('styles', () => {
+
+gulp.task('styles', () => { <% if (includeSass) { %>
   return gulp.src('app/assets/sass/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
@@ -18,14 +20,17 @@ gulp.task('styles', () => {
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
+    <% } if (!includeBootstrap) { %>
     .pipe($.postcss([
       lost()
     ]))
+    <% } %>
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('app/styles'))
     .pipe(reload({stream: true}));
 });
+%>
 
 gulp.task('replace', () => {
   return gulp.src('app/index.html')

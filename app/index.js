@@ -25,7 +25,7 @@ var OnepageGenerator = yeoman.generators.Base.extend({
   },
 
   initializing: function () {
-    this.pkg = require('../../package.json');
+    this.pkg = require('../package.json');
   },
 
   prompting: function () {
@@ -47,7 +47,7 @@ var OnepageGenerator = yeoman.generators.Base.extend({
       }, {
         name: 'Bootstrap',
         value: 'includeBootstrap',
-        checked: true
+        checked: false
       }, {
         name: 'Modernizr',
         value: 'includeModernizr',
@@ -89,7 +89,8 @@ var OnepageGenerator = yeoman.generators.Base.extend({
         this.templatePath('_package.json'),
         this.destinationPath('package.json'),
         {
-          includeSass: this.includeSass
+          includeSass: this.includeSass,
+          includeBootstrap: this.includeBootstrap
         }
       );
     },
@@ -152,6 +153,7 @@ var OnepageGenerator = yeoman.generators.Base.extend({
             "utils":"utils",
             "scss":"styles.scss"
         };
+
         this.fs.copyTpl(
           this.templatePath(sassParts['base']),
           this.destinationPath('app/assets/sass/' + sassParts['base'])
@@ -202,6 +204,7 @@ var OnepageGenerator = yeoman.generators.Base.extend({
         {
           appname: this.appname,
           includeSass: this.includeSass,
+          includeBootstrap: this.includeBootstrap,
           includeModernizr: this.includeModernizr,
           includeJQuery: this.includeJQuery
         }

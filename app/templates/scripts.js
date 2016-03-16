@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	var $mobileMenu = $('.mobilemenu'),
-		$nav = $('.navigation__container'),
+		$nav = $('.navigation'),
 		$header_height = $('.header').outerHeight();
 		$navLinks = $('.scroll_to'),
 		$sections = $('.section');
